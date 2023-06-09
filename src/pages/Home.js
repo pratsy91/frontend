@@ -9,6 +9,8 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
+import Signup from "../components/signup";
+import Login from "../components/login";
 
 const Home = () => {
   return (
@@ -23,7 +25,7 @@ const Home = () => {
         borderRadius="lg"
         borderWidth="1px"
       >
-        <Text fontSize="4xl" fontFamily="Work sans">
+        <Text fontSize="4xl" fontFamily="Work sans" textAlign="center">
           Chat App
         </Text>
       </Box>
@@ -34,8 +36,12 @@ const Home = () => {
             <Tab>Sign Up</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel>{/* <Login /> */}</TabPanel>
-            <TabPanel>{/* <Signup /> */}</TabPanel>
+            <TabPanel>
+              <Login />
+            </TabPanel>
+            <TabPanel>
+              <Signup />
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
