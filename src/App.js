@@ -2,6 +2,7 @@ import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
+import { userLoader } from "./util/ChatLogics";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/chats",
     element: <Chat />,
+    loader: userLoader,
   },
 ]);
 
